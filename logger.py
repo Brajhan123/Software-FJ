@@ -1,6 +1,5 @@
 """
 logger.py
-=========
 Módulo de registro de eventos y errores del Sistema Software FJ.
 Implementa el patrón Singleton para garantizar un único archivo de logs
 durante toda la ejecución del programa.

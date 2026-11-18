@@ -48,7 +48,7 @@ class SistemaFJ:
     # GESTIÓN DE SERVICIOS
 
     def crear_servicio_sala(self, nombre, numero_sala,
-                             capacidad=20, precio=50_000) -> ReservaSala:
+     capacidad=20, precio=50_000) -> ReservaSala:
         """Crea un servicio de reserva de sala."""
         try:
             srv = ReservaSala(nombre, numero_sala, capacidad, precio)
@@ -72,7 +72,7 @@ class SistemaFJ:
             raise
 
     def crear_servicio_asesoria(self, nombre, area,
-                                 asesor, precio=80_000) -> AsesoriaEspecializada:
+        asesor, precio=80_000) -> AsesoriaEspecializada:
         """Crea un servicio de asesoría especializada."""
         try:
             srv = AsesoriaEspecializada(nombre, area, asesor, precio)

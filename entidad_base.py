@@ -1,6 +1,5 @@
 """
 entidad_base.py
-===============
 Clase abstracta base para todas las entidades del Sistema Software FJ.
 Aplica los principios de abstracción y encapsulación de la POO.
 """

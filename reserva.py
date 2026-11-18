@@ -1,6 +1,5 @@
 """
 reserva.py
-==========
 Módulo de gestión de reservas del Sistema Software FJ.
 Integra: Cliente, Servicio, duración y estado.
 Implementa: confirmación, cancelación y procesamiento con manejo de excepciones.
@@ -18,8 +17,7 @@ from excepciones import (
 class Reserva:
     """
     Clase que representa una reserva dentro del sistema Software FJ.
-    Gestiona el ciclo de vida completo: PENDIENTE → CONFIRMADA → COMPLETADA
-                                                              ↘ CANCELADA
+    Gestiona el ciclo de vida completo: PENDIENTE - CONFIRMADA - COMPLETADA - CANCELADA
     """
 
     ESTADOS_VALIDOS = ("PENDIENTE", "PROCESANDO", "CONFIRMADA", "COMPLETADA", "CANCELADA")

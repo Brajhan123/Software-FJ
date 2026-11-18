@@ -1,6 +1,5 @@
 """
 servicios.py
-============
 Módulo de servicios del Sistema Software FJ.
 Contiene:
   - Servicio        : clase abstracta base.
@@ -38,7 +37,7 @@ class Servicio(EntidadBase):
         self._descripcion = descripcion
         self._disponible = disponible
         self._precio_base = None
-        self.precio_base = precio_base          # Usa el setter con validación
+        self.precio_base = precio_base # Usa el setter con validación
 
     # Propiedades
     @property
@@ -85,7 +84,7 @@ class Servicio(EntidadBase):
         pass
 
     def calcular_costo_con_impuesto(self, duracion_horas,
-                                     tasa_impuesto: float = None, **kwargs) -> float:
+        tasa_impuesto: float = None, **kwargs) -> float:
         """
         Variante sobrecargada: calcula el costo incluyendo impuestos.
         Si no se pasa tasa_impuesto, usa la tasa IVA predeterminada.
@@ -95,7 +94,7 @@ class Servicio(EntidadBase):
         return round(costo * (1 + tasa), 2)
 
     def calcular_costo_con_descuento(self, duracion_horas,
-                                      porcentaje_descuento: float = 0, **kwargs) -> float:
+         porcentaje_descuento: float = 0, **kwargs) -> float:
         """
         Variante sobrecargada: calcula el costo aplicando un descuento.
         porcentaje_descuento: valor entre 0.0 y 1.0 (ej. 0.1 = 10 %).
@@ -108,8 +107,8 @@ class Servicio(EntidadBase):
         return round(costo * (1 - porcentaje_descuento), 2)
 
     def calcular_costo_completo(self, duracion_horas,
-                                 porcentaje_descuento: float = 0,
-                                 tasa_impuesto: float = None, **kwargs) -> float:
+        porcentaje_descuento: float = 0,
+         tasa_impuesto: float = None, **kwargs) -> float:
         """
         Variante sobrecargada: aplica descuento e impuesto en un solo paso.
         """
@@ -148,7 +147,7 @@ class ReservaSala(Servicio):
     """
 
     def __init__(self, nombre: str, numero_sala: str,
-                 capacidad_maxima: int = 20, precio_base: float = 50_000):
+        capacidad_maxima: int = 20, precio_base: float = 50_000):
         super().__init__(
             nombre=nombre,
             descripcion="Reserva de sala para reuniones y eventos corporativos",
@@ -213,7 +212,7 @@ class AlquilerEquipo(Servicio):
     TIPOS_VALIDOS = ["proyector", "laptop", "impresora", "camara", "microfono", "tablet"]
 
     def __init__(self, nombre: str, tipo_equipo: str,
-                 cantidad_disponible: int = 5, precio_base: float = 30_000):
+        cantidad_disponible: int = 5, precio_base: float = 30_000):
         if tipo_equipo.lower() not in self.TIPOS_VALIDOS:
             raise ServicioNoDisponibleException(
                 f"Tipo de equipo '{tipo_equipo}' no existe. "
@@ -299,7 +298,7 @@ class AsesoriaEspecializada(Servicio):
     }
 
     def __init__(self, nombre: str, area: str,
-                 asesor: str, precio_base: float = 80_000):
+        asesor: str, precio_base: float = 80_000):
         area_lower = area.lower()
         if area_lower not in self.AREAS:
             raise ServicioNoDisponibleException(

@@ -1,6 +1,5 @@
 """
 excepciones.py
-==============
 Módulo de excepciones personalizadas para el Sistema Software FJ.
 Define una jerarquía de excepciones que permite identificar y manejar
 de forma controlada cada tipo de error del sistema.

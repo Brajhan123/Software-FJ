@@ -1,6 +1,5 @@
 """
 main.py
-=======
 Programa principal — Sistema Integral de Gestión de Clientes,
 Servicios y Reservas de la empresa Software FJ.
 
@@ -40,9 +39,9 @@ def banner(titulo: str, num: int = None):
     print(sep)
 
 
-def ok(msg):  print(f"  ✓ {msg}")
-def err(msg): print(f"  ✗ {msg}")
-def nota(msg): print(f"  → {msg}")
+def ok(msg):  print(f"   {msg}")
+def err(msg): print(f"   {msg}")
+def nota(msg): print(f"  {msg}")
 
 
 # PROGRAMA PRINCIPAL
@@ -208,7 +207,7 @@ def main():
         err(f"Error: {e}")
 
     # OPERACIÓN 12 — Cancelación de reserva exitosa
-    banner("Cancelación de Reserva #1 (válida)", 12)
+    banner("Cancelación de Reserva #1 ", 12)
     try:
         sistema.cancelar_reserva(reserva1, "El cliente reprogramó la reunión.")
         ok(f"Reserva #{reserva1.id} cancelada. Estado: {reserva1.estado}")
@@ -216,7 +215,7 @@ def main():
         err(f"Error: {e}")
 
     # OPERACIÓN 13 — Cancelar reserva ya cancelada  encadenamiento
-    banner("Cancelar reserva ya cancelada (encadenamiento de excepciones)", 13)
+    banner("Cancelar reserva ya cancelada ", 13)
     try:
         sistema.cancelar_reserva(reserva1, "Segundo intento de cancelación.")
     except OperacionNoPermitidaException as e:
@@ -276,8 +275,8 @@ def main():
     sistema.resumen_sistema()
 
     logger.evento("Demostración del sistema completada exitosamente.")
-    print("\n  ✓ Logs guardados en: sistema_fj_logs.txt")
-    print("  ✓ Sistema ejecutado sin interrupciones — Software FJ\n")
+    print("\n   Logs guardados en: sistema_fj_logs.txt")
+    print("   Sistema ejecutado sin interrupciones — Software FJ\n")
 
 
 if __name__ == "__main__":
