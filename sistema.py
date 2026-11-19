@@ -60,7 +60,7 @@ class SistemaFJ:
             raise
 
     def crear_servicio_equipo(self, nombre, tipo_equipo,
-                               cantidad=5, precio=30_000) -> AlquilerEquipo:
+        cantidad=5, precio=30_000) -> AlquilerEquipo:
         """Crea un servicio de alquiler de equipos."""
         try:
             srv = AlquilerEquipo(nombre, tipo_equipo, cantidad, precio)
