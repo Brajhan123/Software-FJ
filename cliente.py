@@ -17,7 +17,7 @@ class Cliente(EntidadBase):
     """
 
     def __init__(self, nombre: str, apellido: str, email: str,
-                 telefono: str, documento: str):
+        telefono: str, documento: str):
         super().__init__(nombre)
         # Atributos privados inicializados a None antes de usar setters
         self.__apellido = None
