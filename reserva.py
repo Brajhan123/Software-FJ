@@ -24,7 +24,7 @@ class Reserva:
     _contador = 0
 
     def __init__(self, cliente, servicio, duracion_horas: float,
-                 fecha_reserva: datetime = None, **kwargs):
+        fecha_reserva: datetime = None, **kwargs):
         self._validar_inputs(cliente, servicio, duracion_horas)
 
         Reserva._contador += 1
