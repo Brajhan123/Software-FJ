@@ -32,7 +32,7 @@ class Servicio(EntidadBase):
     TASA_IVA = 0.19  # IVA del 19 %
 
     def __init__(self, nombre: str, descripcion: str,
-                 precio_base: float, disponible: bool = True):
+        precio_base: float, disponible: bool = True):
         super().__init__(nombre)
         self._descripcion = descripcion
         self._disponible = disponible
